@@ -179,11 +179,7 @@ const weaponsArray = [
 
 // ITERATION 2 - Done
 
-const selectRandom = (array) => {
-    if (!array.length) return undefined;
-    const random = Math.random();
-    return array[Math.floor(random * array.length)];
-};
+const selectRandom = (array) => array[Math.floor(Math.random() * array.length)];
 
 const pickMystery = () => {
     return {
@@ -197,6 +193,4 @@ const pickMystery = () => {
 //console.log(pickMystery()['room'])
 
 // ITERATION 3
-const revealMystery = (envelope) => {
-    return `${envelope['suspect']['firstName']} ${envelope['suspect']['lastName']} killed Mr. Boddy using the ${envelope['weapon']['name']} in the ${envelope['room']['name']}!`
-}
+const revealMystery = (envelope) =>  `${envelope['suspect']['firstName']} ${envelope['suspect']['lastName']} killed Mr. Boddy using the ${envelope['weapon']['name']} in the ${envelope['room']['name']}!`;
